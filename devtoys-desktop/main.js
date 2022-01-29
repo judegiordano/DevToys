@@ -11,14 +11,14 @@ function createWindow () {
     allowRunningInsecureContent: false,
     // frame: false,
 		// transparent: true,
-    // webPreferences: {
-    //   // preload: path.join(__dirname, 'preload.js')
-    // }
+    webPreferences: {
+      // preload: path.join(__dirname, 'preload.js')
+    }
   })
 
   // and load the index.html of the app.
   // mainWindow.loadFile('index.html')
-  mainWindow.loadURL('http://localhost:3000/');
+  mainWindow.loadURL('http://localhost:3001/');
   mainWindow.removeMenu();
   mainWindow.webContents.on('new-window', function(e, url) {
     e.preventDefault();
@@ -26,7 +26,7 @@ function createWindow () {
   });
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished

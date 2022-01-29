@@ -16,7 +16,9 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				<meta name="author" content="Jude Giordano" />
 				<link rel="icon" href="/favicon.ico" />
-				<meta name="theme-color" content="#4285f4" />
+				<link rel="manifest" href="/manifest.json" />
+				<meta name="theme-color" content="#26292b" />
+				<meta name="apple-mobile-web-app-status-bar" content="#26292b" />
 			</Head>
 			<div className="p-3 m-auto max-w-7xl font-content">
 				<Component {...pageProps} />

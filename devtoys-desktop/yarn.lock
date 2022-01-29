@@ -93,6 +93,11 @@ core-util-is@~1.0.0:
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.3.tgz#a6042d3634c2b27e9328f837b965fac83808db85"
   integrity sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==
 
+custom-electron-titlebar@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/custom-electron-titlebar/-/custom-electron-titlebar-4.0.1.tgz#cc337e21a4bf5522c7c9729a41657049a56de003"
+  integrity sha512-fdnAylObN/qvmd+UFwlWnJqttbOBkuWF7tSPe19R12CtadNTw9PWzWC8NM5KuoKanCSq6KclruhgQeH++16cuQ==
+
 debug@^2.6.9:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"

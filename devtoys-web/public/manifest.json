@@ -1,0 +1,13 @@
+{
+	"name": "DevToys",
+	"short_name": "devtoys",
+	"description": "devtoys app",
+	"start_url": "/",
+	"display": "standalone",
+	"display_override": [
+    "window-controls-overlay"
+  ],
+	"theme_color": "#26292b",
+	"background_color": "#000000",
+	"orientation": "portrait-primary"
+}

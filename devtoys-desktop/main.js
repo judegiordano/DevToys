@@ -1,18 +1,27 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron')
+const { app, BrowserWindow } = require('electron')
 const path = require('path')
 const { shell } = require('electron')
 
-function createWindow () {
+function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 1400,
     height: 1000,
+    show: false,
     allowRunningInsecureContent: false,
     // frame: false,
-		// transparent: true,
+    backgroundColor: "#2f3136",
+    // transparent: true,
+    // titleBarOverlay: {
+    //   color: 'blue',
+    //   symbolColor: 'red'
+    // },
+
     webPreferences: {
-      // preload: path.join(__dirname, 'preload.js')
+      devTools: true,
+      nodeIntegration: true,
+      preload: path.join(__dirname, 'preload.js')
     }
   })
 
@@ -20,7 +29,10 @@ function createWindow () {
   // mainWindow.loadFile('index.html')
   mainWindow.loadURL('http://localhost:3001/');
   mainWindow.removeMenu();
-  mainWindow.webContents.on('new-window', function(e, url) {
+  mainWindow.once('ready-to-show', () => {
+    mainWindow.show()
+  })
+  mainWindow.webContents.on('new-window', (e, url) => {
     e.preventDefault();
     shell.openExternal(url);
   });
@@ -32,6 +44,7 @@ function createWindow () {
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
+
 app.whenReady().then(() => {
   createWindow()
 
